@@ -1,0 +1,10 @@
+#!/bin/bash -x
+
+read -p "Enter the year to check if it's leap year" year
+
+if (( (($year % 4 == 0)) && (($year % 100 != 0)) || (($year % 400 == 0)) ))
+then
+	echo $year"This year is a leap year"
+else
+	echo $year"THis is NOT a leap year"
+fi
